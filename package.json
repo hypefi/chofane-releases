@@ -1,0 +1,64 @@
+{
+  "name": "Chofane",
+  "description": "Open-source screenshot utility that lives in your menubar.",
+  "version": "0.10.10",
+  "main": "./src/index.js",
+  "author": {},
+  "license": "GPL-3.0",
+  "homepage": "https://getchofane.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypefi/chofane.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hypefi/chofane/issues"
+  },
+  "scripts": {
+    "start": "electron-forge start",
+    "build": "node ./build",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
+  },
+  "dependencies": {
+    "@electron-forge/maker-dmg": "^7.2.0",
+    "@hypefi/node-json-db": "^1.6.0",
+    "auto-launch": "^5.0.5",
+    "axios": "^1.4.0",
+    "decompress": "^4.2.0",
+    "electron-log": "^5.0.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.1.0",
+    "fs-extra": "^7.0.1",
+    "json2csv": "^5.0.7",
+    "lowdb": "^1.0.0",
+    "openai": "^4.11.1",
+    "regex": "^0.1.1",
+    "request": "^2.88.0",
+    "sudo-prompt": "^8.2.5",
+    "update-electron-app": "^3.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron": "^22.x",
+    "standard": "^12.0.1"
+  },
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-dmg",
+          "config": {
+            "background": "./background-dmg.png",
+            "format": "ULFO"
+          }
+        }
+      ]
+    }
+  }
+}
